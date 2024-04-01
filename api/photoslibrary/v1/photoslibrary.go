@@ -30,7 +30,7 @@ import (
 
 	googleapi "google.golang.org/api/googleapi"
 
-	gensupport "github.com/Commandtechno/gphotos/api/photoslibrary/v1/internal/gensupport"
+	gensupport "github.com/Commandtechno/photoslibrary/api/photoslibrary/v1/internal/gensupport"
 )
 
 // Always reference these packages, just in case the auto-generated code

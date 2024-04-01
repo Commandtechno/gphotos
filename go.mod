@@ -1,4 +1,4 @@
-module github.com/Commandtechno/gphotos
+module github.com/Commandtechno/photoslibrary
 
 go 1.22.1
 

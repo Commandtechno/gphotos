@@ -3264,6 +3264,24 @@ func (c *MediaItemsListCall) Do(opts ...googleapi.CallOption) (*ListMediaItemsRe
 	// }
 }
 
+func (c *MediaItemsListCall) Pages(ctx context.Context, f func(*ListMediaItemsResponse) error) error {
+	c.ctx_ = ctx
+	defer c.PageToken(c.urlParams_.Get("pageToken")) // reset paging to original point
+	for {
+		x, err := c.Do()
+		if err != nil {
+			return err
+		}
+		if err := f(x); err != nil {
+			return err
+		}
+		if x.NextPageToken == "" {
+			return nil
+		}
+		c.PageToken(x.NextPageToken)
+	}
+}
+
 // method id "photoslibrary.mediaItems.search":
 
 type MediaItemsSearchCall struct {

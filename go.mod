@@ -1,5 +1,5 @@
-module github.com/gphotosuploader/googlemirror
+module github.com/Commandtechno/gphotos
 
-go 1.13
+go 1.22.1
 
 require google.golang.org/api v0.19.0

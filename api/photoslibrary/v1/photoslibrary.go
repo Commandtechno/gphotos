@@ -11,10 +11,10 @@
 //
 // Usage example:
 //
-//   import "github.com/gphotosuploader/googlemirror/api/photoslibrary/v3"
+//   import "github.com/gphotosuploader/googlemirror/api/photoslibrary/v1"
 //   ...
 //   photoslibraryService, err := photoslibrary.New(oauthHttpClient)
-package photoslibrary // import "github.com/gphotosuploader/googlemirror/api/photoslibrary/v3"
+package photoslibrary // import "github.com/gphotosuploader/googlemirror/api/photoslibrary/v1"
 
 import (
 	"bytes"
@@ -30,7 +30,7 @@ import (
 
 	googleapi "google.golang.org/api/googleapi"
 
-	gensupport "github.com/Commandtechno/gphotos/api/photoslibrary/v3/internal/gensupport"
+	gensupport "github.com/Commandtechno/gphotos/api/photoslibrary/v1/internal/gensupport"
 )
 
 // Always reference these packages, just in case the auto-generated code
@@ -47,9 +47,9 @@ var _ = errors.New
 var _ = strings.Replace
 var _ = context.Canceled
 
-const apiId = "photoslibrary:v3"
+const apiId = "photoslibrary:v1"
 const apiName = "photoslibrary"
-const apiVersion = "v3"
+const apiVersion = "v1"
 const basePath = "https://photoslibrary.googleapis.com/"
 
 // OAuth2 scopes used by this API.
@@ -2012,7 +2012,7 @@ func (c *AlbumsAddEnrichmentCall) doRequest(alt string) (*http.Response, error) 
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums/{+albumId}:addEnrichment")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums/{+albumId}:addEnrichment")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -2061,7 +2061,7 @@ func (c *AlbumsAddEnrichmentCall) Do(opts ...googleapi.CallOption) (*AddEnrichme
 	return ret, nil
 	// {
 	//   "description": "Adds an enrichment to a specified position in a defined album.",
-	//   "flatPath": "v3/albums/{albumsId}:addEnrichment",
+	//   "flatPath": "v1/albums/{albumsId}:addEnrichment",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.albums.addEnrichment",
 	//   "parameterOrder": [
@@ -2076,7 +2076,7 @@ func (c *AlbumsAddEnrichmentCall) Do(opts ...googleapi.CallOption) (*AddEnrichme
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/albums/{+albumId}:addEnrichment",
+	//   "path": "v1/albums/{+albumId}:addEnrichment",
 	//   "request": {
 	//     "$ref": "AddEnrichmentToAlbumRequest"
 	//   },
@@ -2147,7 +2147,7 @@ func (c *AlbumsCreateCall) doRequest(alt string) (*http.Response, error) {
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -2193,12 +2193,12 @@ func (c *AlbumsCreateCall) Do(opts ...googleapi.CallOption) (*Album, error) {
 	return ret, nil
 	// {
 	//   "description": "Creates an album in a user's Google Photos library.",
-	//   "flatPath": "v3/albums",
+	//   "flatPath": "v1/albums",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.albums.create",
 	//   "parameterOrder": [],
 	//   "parameters": {},
-	//   "path": "v3/albums",
+	//   "path": "v1/albums",
 	//   "request": {
 	//     "$ref": "CreateAlbumRequest"
 	//   },
@@ -2278,7 +2278,7 @@ func (c *AlbumsGetCall) doRequest(alt string) (*http.Response, error) {
 	}
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums/{+albumId}")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums/{+albumId}")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
@@ -2327,7 +2327,7 @@ func (c *AlbumsGetCall) Do(opts ...googleapi.CallOption) (*Album, error) {
 	return ret, nil
 	// {
 	//   "description": "Returns the album specified by the given album id.",
-	//   "flatPath": "v3/albums/{albumsId}",
+	//   "flatPath": "v1/albums/{albumsId}",
 	//   "httpMethod": "GET",
 	//   "id": "photoslibrary.albums.get",
 	//   "parameterOrder": [
@@ -2342,7 +2342,7 @@ func (c *AlbumsGetCall) Do(opts ...googleapi.CallOption) (*Album, error) {
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/albums/{+albumId}",
+	//   "path": "v1/albums/{+albumId}",
 	//   "response": {
 	//     "$ref": "Album"
 	//   },
@@ -2448,7 +2448,7 @@ func (c *AlbumsListCall) doRequest(alt string) (*http.Response, error) {
 	}
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
@@ -2494,7 +2494,7 @@ func (c *AlbumsListCall) Do(opts ...googleapi.CallOption) (*ListAlbumsResponse, 
 	return ret, nil
 	// {
 	//   "description": "Lists all albums shown to a user in the 'Albums' tab of the Google\nPhotos app.",
-	//   "flatPath": "v3/albums",
+	//   "flatPath": "v1/albums",
 	//   "httpMethod": "GET",
 	//   "id": "photoslibrary.albums.list",
 	//   "parameterOrder": [],
@@ -2511,7 +2511,7 @@ func (c *AlbumsListCall) Do(opts ...googleapi.CallOption) (*ListAlbumsResponse, 
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/albums",
+	//   "path": "v1/albums",
 	//   "response": {
 	//     "$ref": "ListAlbumsResponse"
 	//   },
@@ -2607,7 +2607,7 @@ func (c *AlbumsShareCall) doRequest(alt string) (*http.Response, error) {
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums/{+albumId}:share")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums/{+albumId}:share")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -2656,7 +2656,7 @@ func (c *AlbumsShareCall) Do(opts ...googleapi.CallOption) (*ShareAlbumResponse,
 	return ret, nil
 	// {
 	//   "description": "Marks an album as 'shared' and accessible to other users. This action can\nonly be performed on albums which were created by the developer via the\nAPI.",
-	//   "flatPath": "v3/albums/{albumsId}:share",
+	//   "flatPath": "v1/albums/{albumsId}:share",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.albums.share",
 	//   "parameterOrder": [
@@ -2671,7 +2671,7 @@ func (c *AlbumsShareCall) Do(opts ...googleapi.CallOption) (*ShareAlbumResponse,
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/albums/{+albumId}:share",
+	//   "path": "v1/albums/{+albumId}:share",
 	//   "request": {
 	//     "$ref": "ShareAlbumRequest"
 	//   },
@@ -2743,7 +2743,7 @@ func (c *AlbumBatchAddMediaItemsCall) doRequest(alt string) (*http.Response, err
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/albums/{+albumId}:batchAddMediaItems")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/albums/{+albumId}:batchAddMediaItems")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -2795,7 +2795,7 @@ func (c *AlbumBatchAddMediaItemsCall) Do(opts ...googleapi.CallOption) (*AlbumBa
 	return ret, nil
 	// {
 	//   "description": "Adds existing media items to an existing album.",
-	//   "flatPath": "v3/albums/{albumId}:batchAddMediaItems",
+	//   "flatPath": "v1/albums/{albumId}:batchAddMediaItems",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.albums.batchAddMediaItems",
 	//   "parameterOrder": [
@@ -2810,7 +2810,7 @@ func (c *AlbumBatchAddMediaItemsCall) Do(opts ...googleapi.CallOption) (*AlbumBa
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/albums/{albumId}:batchAddMediaItems",
+	//   "path": "v1/albums/{albumId}:batchAddMediaItems",
 	//   "request": {
 	//     "$ref": "AlbumBatchAddMediaItemsRequest"
 	//   },
@@ -2895,7 +2895,7 @@ func (c *MediaItemsBatchCreateCall) doRequest(alt string) (*http.Response, error
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/mediaItems:batchCreate")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/mediaItems:batchCreate")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -2941,12 +2941,12 @@ func (c *MediaItemsBatchCreateCall) Do(opts ...googleapi.CallOption) (*BatchCrea
 	return ret, nil
 	// {
 	//   "description": "Creates one or more media items in a user's Google Photos library.\nIf an album id is specified, the media item(s) are also added to the album.\nBy default the media item(s) will be added to the end of the library or\nalbum.\n\nIf an album id and position are both defined, then the media items will\nbe added to the album at the specified position.\n\nIf multiple media items are given, they will be inserted at the specified\nposition.",
-	//   "flatPath": "v3/mediaItems:batchCreate",
+	//   "flatPath": "v1/mediaItems:batchCreate",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.mediaItems.batchCreate",
 	//   "parameterOrder": [],
 	//   "parameters": {},
-	//   "path": "v3/mediaItems:batchCreate",
+	//   "path": "v1/mediaItems:batchCreate",
 	//   "request": {
 	//     "$ref": "BatchCreateMediaItemsRequest"
 	//   },
@@ -3026,7 +3026,7 @@ func (c *MediaItemsGetCall) doRequest(alt string) (*http.Response, error) {
 	}
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/mediaItems/{+mediaItemId}")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/mediaItems/{+mediaItemId}")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
@@ -3075,7 +3075,7 @@ func (c *MediaItemsGetCall) Do(opts ...googleapi.CallOption) (*MediaItem, error)
 	return ret, nil
 	// {
 	//   "description": "Returns the media item specified based on a given media item id.",
-	//   "flatPath": "v3/mediaItems/{mediaItemsId}",
+	//   "flatPath": "v1/mediaItems/{mediaItemsId}",
 	//   "httpMethod": "GET",
 	//   "id": "photoslibrary.mediaItems.get",
 	//   "parameterOrder": [
@@ -3090,7 +3090,7 @@ func (c *MediaItemsGetCall) Do(opts ...googleapi.CallOption) (*MediaItem, error)
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/mediaItems/{+mediaItemId}",
+	//   "path": "v1/mediaItems/{+mediaItemId}",
 	//   "response": {
 	//     "$ref": "MediaItem"
 	//   },
@@ -3183,7 +3183,7 @@ func (c *MediaItemsListCall) doRequest(alt string) (*http.Response, error) {
 	reqHeaders.Set("User-Agent", c.s.userAgent())
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/mediaItems")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/mediaItems")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
@@ -3229,7 +3229,7 @@ func (c *MediaItemsListCall) Do(opts ...googleapi.CallOption) (*ListMediaItemsRe
 	return ret, nil
 	// {
 	//   "description": "Lists all media items from a user's Google Photos library.",
-	//   "flatPath": "v3/mediaItems",
+	//   "flatPath": "v1/mediaItems",
 	//   "httpMethod": "GET",
 	//   "id": "photoslibrary.mediaItems.list",
 	//   "parameterOrder": [],
@@ -3251,7 +3251,7 @@ func (c *MediaItemsListCall) Do(opts ...googleapi.CallOption) (*ListMediaItemsRe
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/mediaItems",
+	//   "path": "v1/mediaItems",
 	//   "response": {
 	//     "$ref": "ListMediaItemsResponse"
 	//   },
@@ -3333,7 +3333,7 @@ func (c *MediaItemsSearchCall) doRequest(alt string) (*http.Response, error) {
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/mediaItems:search")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/mediaItems:search")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -3379,12 +3379,12 @@ func (c *MediaItemsSearchCall) Do(opts ...googleapi.CallOption) (*SearchMediaIte
 	return ret, nil
 	// {
 	//   "description": "Searches for media items in a user's Google Photos library.\nIf no filters are set, then all media items in the user's library will be\nreturned.\n\nIf an album is set, all media items in the specified album will be\nreturned.\n\nIf filters are specified, anything that matches the filters from the user's\nlibrary will be listed.\n\nIf an album and filters are set, then this will result in an error.",
-	//   "flatPath": "v3/mediaItems:search",
+	//   "flatPath": "v1/mediaItems:search",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.mediaItems.search",
 	//   "parameterOrder": [],
 	//   "parameters": {},
-	//   "path": "v3/mediaItems:search",
+	//   "path": "v1/mediaItems:search",
 	//   "request": {
 	//     "$ref": "SearchMediaItemsRequest"
 	//   },
@@ -3477,7 +3477,7 @@ func (c *SharedAlbumsJoinCall) doRequest(alt string) (*http.Response, error) {
 	}
 	reqHeaders.Set("Content-Type", "application/json")
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/sharedAlbums:join")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/sharedAlbums:join")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("POST", urls, body)
 	req.Header = reqHeaders
@@ -3523,12 +3523,12 @@ func (c *SharedAlbumsJoinCall) Do(opts ...googleapi.CallOption) (*JoinSharedAlbu
 	return ret, nil
 	// {
 	//   "description": "Joins a shared album on behalf of the Google Photos user.",
-	//   "flatPath": "v3/sharedAlbums:join",
+	//   "flatPath": "v1/sharedAlbums:join",
 	//   "httpMethod": "POST",
 	//   "id": "photoslibrary.sharedAlbums.join",
 	//   "parameterOrder": [],
 	//   "parameters": {},
-	//   "path": "v3/sharedAlbums:join",
+	//   "path": "v1/sharedAlbums:join",
 	//   "request": {
 	//     "$ref": "JoinSharedAlbumRequest"
 	//   },
@@ -3626,7 +3626,7 @@ func (c *SharedAlbumsListCall) doRequest(alt string) (*http.Response, error) {
 	}
 	var body io.Reader = nil
 	c.urlParams_.Set("alt", alt)
-	urls := googleapi.ResolveRelative(c.s.BasePath, "v3/sharedAlbums")
+	urls := googleapi.ResolveRelative(c.s.BasePath, "v1/sharedAlbums")
 	urls += "?" + c.urlParams_.Encode()
 	req, _ := http.NewRequest("GET", urls, body)
 	req.Header = reqHeaders
@@ -3672,7 +3672,7 @@ func (c *SharedAlbumsListCall) Do(opts ...googleapi.CallOption) (*ListSharedAlbu
 	return ret, nil
 	// {
 	//   "description": "Lists all shared albums shown to a user in the 'Sharing' tab of the\nGoogle Photos app.",
-	//   "flatPath": "v3/sharedAlbums",
+	//   "flatPath": "v1/sharedAlbums",
 	//   "httpMethod": "GET",
 	//   "id": "photoslibrary.sharedAlbums.list",
 	//   "parameterOrder": [],
@@ -3689,7 +3689,7 @@ func (c *SharedAlbumsListCall) Do(opts ...googleapi.CallOption) (*ListSharedAlbu
 	//       "type": "string"
 	//     }
 	//   },
-	//   "path": "v3/sharedAlbums",
+	//   "path": "v1/sharedAlbums",
 	//   "response": {
 	//     "$ref": "ListSharedAlbumsResponse"
 	//   },
